@@ -1,5 +1,13 @@
 package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common;
 
+import java.io.*;
+
+public class OwlChatResponse {
+    public static void main(String[] args) {
+        System.out.println("Owl Chat opened.");
+    }
+}
+
 /*
 import src.main.java.org.sample.aws.chatbot.temple.db.OwlChatCharacter;
 import src.main.java.org.sample.aws.chatbot.temple.db.DBUtil;
@@ -9,14 +17,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class OwlChatResponse {
+public class owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse {
     String speechText;
     String title;
     Map<String, String> sessionAttributes;
 
     private static final String help = "You can ask quotes, lightsaber color, Jedi or Sith questions.";
 
-    public OwlChatResponse(String speechText, String title) {
+    public owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse(String speechText, String title) {
         this.speechText = speechText;
         this.title = title;
         sessionAttributes = new HashMap<>();
@@ -34,15 +42,15 @@ public class OwlChatResponse {
         return sessionAttributes;
     }
 
-    public static OwlChatResponse getWelcomeResponse() {
-        return new OwlChatResponse("Welcome to Owl Chat Chatbot!" + help, "Owl Chat Welcome");
+    public static owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse getWelcomeResponse() {
+        return new owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse("Welcome to Owl Chat Chatbot!" + help, "Owl Chat Welcome");
     }
 
-    public static OwlChatResponse getHelpResponse() {
-        return new OwlChatResponse(help, "Owl Chat Help");
+    public static owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse getHelpResponse() {
+        return new owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse(help, "Owl Chat Help");
     }
 
-    public static OwlChatResponse getPlanetResponse(String name) {
+    public static owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse getPlanetResponse(String name) {
         OwlChatCharacter character = DBUtil.getCharacter(name);
 
         String speechText;
@@ -59,10 +67,10 @@ public class OwlChatResponse {
             speechText = "Are you sure " + name + " was in Star Wars?";
         }
 
-        return new OwlChatResponse(speechText, "Star Wars Planet");
+        return new owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse(speechText, "Star Wars Planet");
     }
 
-    public static OwlChatResponse getLightsaberResponse(String name) {
+    public static owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse getLightsaberResponse(String name) {
         OwlChatCharacter character = DBUtil.getCharacter(name);
 
         String speechText;
@@ -78,11 +86,11 @@ public class OwlChatResponse {
         } else {
             speechText = "Are you sure " + name + " was in Star Wars?";
         }
-        return new OwlChatResponse(speechText, "Star Wars Lightsaber");
+        return new owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse(speechText, "Star Wars Lightsaber");
     }
 
 
-    public static OwlChatResponse getQuotesResponse(String name) {
+    public static owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse getQuotesResponse(String name) {
         OwlChatCharacter character = DBUtil.getCharacter(name);
 
         String speechText;
@@ -100,11 +108,11 @@ public class OwlChatResponse {
         }
 
         // Create the Simple card content.
-        return new OwlChatResponse(speechText, "Star Wars Quotes");
+        return new owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse(speechText, "Star Wars Quotes");
     }
 
 
-    public static OwlChatResponse getForceSensitiveResponse(String name) {
+    public static owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse getForceSensitiveResponse(String name) {
         OwlChatCharacter character = DBUtil.getCharacter(name);
 
         String speechText;
@@ -119,10 +127,10 @@ public class OwlChatResponse {
         }
 
         // Create the Simple card content.
-        return new OwlChatResponse(speechText, "Star Wars Force Sensitive");
+        return new owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse(speechText, "Star Wars Force Sensitive");
     }
 
-    public static OwlChatResponse getForceSideResponse(String name) {
+    public static owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse getForceSideResponse(String name) {
         OwlChatCharacter character = DBUtil.getCharacter(name);
 
         String speechText;
@@ -142,27 +150,27 @@ public class OwlChatResponse {
         }
 
         // Create the Simple card content.
-        return new OwlChatResponse(speechText, "Star Wars Force Side");
+        return new owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse(speechText, "Star Wars Force Side");
     }
 
-    public static OwlChatResponse getDialogueQuestion() {
+    public static owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse getDialogueQuestion() {
         OwlChatCharacter character = DBUtil.getRandomCharacter();
         List<String> list = character.getQuotes();
 
         Random random = new Random();
         String speechText = "Who said \"" + list.get(random.nextInt(list.size())) + "\"";
 
-        OwlChatResponse response = new OwlChatResponse(speechText, "Star Wars Quote Question");
+        owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse response = new owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse(speechText, "Star Wars Quote Question");
         response.sessionAttributes.put("character", character.getName());
         response.sessionAttributes.put("question", speechText);
 
         return response;
     }
 
-    public static OwlChatResponse getDialogueResponse() {
+    public static owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse getDialogueResponse() {
         String speechText = "Yep, you're right!";
 
-        return new OwlChatResponse(speechText, "Star Wars Quote Response");
+        return new owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse(speechText, "Star Wars Quote Response");
     }
 }
  */

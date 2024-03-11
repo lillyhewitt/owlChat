@@ -1,5 +1,6 @@
-package org.sample.aws.chatbot.starwars.db;
+package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.db;
 
+/*
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
@@ -15,9 +16,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-/**
- * @author Arun Gupta
- */
 public class DBUtil {
 
     private static AmazonDynamoDB dynamodbClient;
@@ -53,14 +51,14 @@ public class DBUtil {
         return result.getCount();
     }
 
-    public static StarWarsCharacter getRandomCharacter() {
+    public static OwlChatCharacter getRandomCharacter() {
         DynamoDBMapper mapper = new DynamoDBMapper(getClient());
         Random random = new Random();
 
-        return mapper.load(StarWarsCharacter.class, random.nextInt(getCharactersCount()) + 1);
+        return mapper.load(OwlChatCharacter.class, random.nextInt(getCharactersCount()) + 1);
     }
 
-    public static StarWarsCharacter getCharacter(String name) {
+    public static OwlChatCharacter getCharacter(String name) {
         System.out.println("Name: " + name);
         DynamoDBMapper mapper = new DynamoDBMapper(getClient());
         Map<String, AttributeValue> eav = new HashMap<>();
@@ -68,7 +66,7 @@ public class DBUtil {
         DynamoDBScanExpression scanExpression = new DynamoDBScanExpression()
                 .withFilterExpression("whoami = :name")
                 .withExpressionAttributeValues(eav);
-        List<StarWarsCharacter> list = mapper.scan(StarWarsCharacter.class, scanExpression);
+        List<OwlChatCharacter> list = mapper.scan(OwlChatCharacter.class, scanExpression);
         
         if (!list.isEmpty()) {
             return list.get(0);
@@ -77,3 +75,4 @@ public class DBUtil {
         return null;
     }
 }
+*/

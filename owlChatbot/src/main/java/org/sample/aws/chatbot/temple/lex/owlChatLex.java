@@ -1,5 +1,6 @@
-package org.sample.aws.chatbot.starwars.lex;
+package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.lex;
 
+/*
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import org.sample.aws.chatbot.starwars.common.StarWarsIntent;
@@ -144,3 +145,5 @@ public class StarWarsLexBot implements RequestHandler<LexRequest, LexResponse> {
         return new LexResponse(dialogAction);
     }
 }
+
+ */

@@ -1,9 +1,8 @@
-package org.sample.aws.chatbot.starwars.alexa;
+package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common;
 
-import org.sample.aws.chatbot.starwars.common.StarWarsIntent;
-import org.sample.aws.chatbot.starwars.common.StarWarsResponse;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+/*
+import src.main.java.org.slf4j.Logger;
+import src.main.java.org.slf4j.LoggerFactory;
 
 import com.amazon.speech.slu.Intent;
 import com.amazon.speech.speechlet.IntentRequest;
@@ -18,11 +17,8 @@ import com.amazon.speech.ui.PlainTextOutputSpeech;
 import com.amazon.speech.ui.Reprompt;
 import com.amazon.speech.ui.SimpleCard;
 
-/**
- * @author Arun Gupta
- */
-public class StarwarsSpeechlet implements Speechlet {
-    private static final Logger log = LoggerFactory.getLogger(StarwarsSpeechlet.class);
+public class OwlChatSpeechlet implements Speechlet {
+    private static final Logger log = LoggerFactory.getLogger(OwlChatSpeechlet.class);
 
     @Override
     public void onSessionStarted(final SessionStartedRequest request, final Session session)
@@ -58,63 +54,60 @@ public class StarwarsSpeechlet implements Speechlet {
         String intentName = (intent != null) ? intent.getName() : null;
         String character = intent.getSlot("character").getValue();
 
-        if (StarWarsIntent.QUOTES_INTENT.equals(intentName)) {
+        if (OwlChatIntent.QUOTES_INTENT.equals(intentName)) {
             return getQuotesResponse(character);
-        } else if (StarWarsIntent.PLANET_INTENT.equals(intentName)) {
+        } else if (OwlChatIntent.PLANET_INTENT.equals(intentName)) {
             return getPlanetResponse(character);
-        } else if (StarWarsIntent.LIGHTSABER_INTENT.equals(intentName)) {
+        } else if (OwlChatIntent.LIGHTSABER_INTENT.equals(intentName)) {
             return getLightsaberResponse(character);
-        } else if (StarWarsIntent.FORCE_SENSITIVE_INTENT.equals(intentName)) {
+        } else if (OwlChatIntent.FORCE_SENSITIVE_INTENT.equals(intentName)) {
             return getForceSensitiveResponse(character);
-        } else if (StarWarsIntent.FORCE_SIDE_INTENT.equals(intentName)) {
+        } else if (OwlChatIntent.FORCE_SIDE_INTENT.equals(intentName)) {
             return getForceSideResponse(character);
         } else {
             throw new SpeechletException("Invalid Intent: " + intentName);
         }
     }
 
-    /**
-     * Creates and returns a {@code SpeechletResponse} with a welcome message.
-     *
-     * @return SpeechletResponse spoken and visual response for the given intent
-     */
+    // Creates and returns a {@code SpeechletResponse} with a welcome message.
+     //@return SpeechletResponse spoken and visual response for the given intent
+
     private SpeechletResponse getWelcomeResponse() {
-        StarWarsResponse response = StarWarsResponse.getWelcomeResponse();
+        OwlChatResponse response = OwlChatResponse.getWelcomeResponse();
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
     }
 
-    /**
-     * Creates a {@code SpeechletResponse} for the help intent.
-     *
-     * @return SpeechletResponse spoken and visual response for the given intent
-     */
+    //Creates a {@code SpeechletResponse} for the help intent.
+
+     //@return SpeechletResponse spoken and visual response for the given intent
+
     private SpeechletResponse getHelpResponse() {
-        StarWarsResponse response = StarWarsResponse.getWelcomeResponse();
+        OwlChatResponse response = OwlChatResponse.getWelcomeResponse();
         return getSpeechletResponse(response.getSpeechText(), response.getTitle());
     }
 
     private SpeechletResponse getQuotesResponse(String character) {
-        StarWarsResponse response = StarWarsResponse.getQuotesResponse(character);
+        OwlChatResponse response = OwlChatResponse.getQuotesResponse(character);
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
     }
 
     private SpeechletResponse getPlanetResponse(String character) {
-        StarWarsResponse response = StarWarsResponse.getPlanetResponse(character);
+        OwlChatResponse response = OwlChatResponse.getPlanetResponse(character);
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
     }
 
     private SpeechletResponse getLightsaberResponse(String character) {
-        StarWarsResponse response = StarWarsResponse.getLightsaberResponse(character);
+        OwlChatResponse response = OwlChatResponse.getLightsaberResponse(character);
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
     }
 
     private SpeechletResponse getForceSensitiveResponse(String name) {
-        StarWarsResponse response = StarWarsResponse.getForceSensitiveResponse(name);
+        OwlChatResponse response = OwlChatResponse.getForceSensitiveResponse(name);
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
     }
 
     private SpeechletResponse getForceSideResponse(String name) {
-        StarWarsResponse response = StarWarsResponse.getForceSideResponse(name);
+        OwlChatResponse response = OwlChatResponse.getForceSideResponse(name);
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
     }
 
@@ -149,3 +142,5 @@ public class StarwarsSpeechlet implements Speechlet {
         return SpeechletResponse.newAskResponse(speech, reprompt, getCard(speechText, title));
     }
 }
+
+ */

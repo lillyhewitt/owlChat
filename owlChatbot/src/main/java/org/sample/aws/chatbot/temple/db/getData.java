@@ -1,16 +1,14 @@
-package org.sample.aws.chatbot.starwars.db;
+package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.db;
 
+/*
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
 import java.util.List;
 
-/**
- * @author Arun Gupta
- */
 @DynamoDBTable(tableName = "starwars")
-public class StarWarsCharacter {
+public class OwlChatCharacter {
 
     private int id;
     private String name;
@@ -23,10 +21,10 @@ public class StarWarsCharacter {
     private String forceSide;
     private List<String> quotes;
 
-    public StarWarsCharacter() {
+    public OwlChatCharacter() {
     }
 
-    public StarWarsCharacter(int id, String name, String planet) {
+    public OwlChatCharacter(int id, String name, String planet) {
         this.id = id;
         this.name = name;
         this.planet = planet;
@@ -118,3 +116,6 @@ public class StarWarsCharacter {
         this.quotes = quotes;
     }
 }
+
+ */
+

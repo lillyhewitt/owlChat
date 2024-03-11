@@ -1,21 +1,22 @@
-package org.sample.aws.chatbot.starwars.common;
+package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common;
 
-import org.sample.aws.chatbot.starwars.db.DBUtil;
-import org.sample.aws.chatbot.starwars.db.StarWarsCharacter;
+/*
+import src.main.java.org.sample.aws.chatbot.temple.db.OwlChatCharacter;
+import src.main.java.org.sample.aws.chatbot.temple.db.DBUtil;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class StarWarsResponse {
+public class OwlChatResponse {
     String speechText;
     String title;
     Map<String, String> sessionAttributes;
 
     private static final String help = "You can ask quotes, lightsaber color, Jedi or Sith questions.";
 
-    public StarWarsResponse(String speechText, String title) {
+    public OwlChatResponse(String speechText, String title) {
         this.speechText = speechText;
         this.title = title;
         sessionAttributes = new HashMap<>();
@@ -33,16 +34,16 @@ public class StarWarsResponse {
         return sessionAttributes;
     }
 
-    public static StarWarsResponse getWelcomeResponse() {
-        return new StarWarsResponse("Welcome to Star Wars Chatbot!" + help, "Star Wars Welcome");
+    public static OwlChatResponse getWelcomeResponse() {
+        return new OwlChatResponse("Welcome to Owl Chat Chatbot!" + help, "Owl Chat Welcome");
     }
 
-    public static StarWarsResponse getHelpResponse() {
-        return new StarWarsResponse(help, "Star Wars Help");
+    public static OwlChatResponse getHelpResponse() {
+        return new OwlChatResponse(help, "Owl Chat Help");
     }
 
-    public static StarWarsResponse getPlanetResponse(String name) {
-        StarWarsCharacter character = DBUtil.getCharacter(name);
+    public static OwlChatResponse getPlanetResponse(String name) {
+        OwlChatCharacter character = DBUtil.getCharacter(name);
 
         String speechText;
 
@@ -58,11 +59,11 @@ public class StarWarsResponse {
             speechText = "Are you sure " + name + " was in Star Wars?";
         }
 
-        return new StarWarsResponse(speechText, "Star Wars Planet");
+        return new OwlChatResponse(speechText, "Star Wars Planet");
     }
 
-    public static StarWarsResponse getLightsaberResponse(String name) {
-        StarWarsCharacter character = DBUtil.getCharacter(name);
+    public static OwlChatResponse getLightsaberResponse(String name) {
+        OwlChatCharacter character = DBUtil.getCharacter(name);
 
         String speechText;
 
@@ -77,12 +78,12 @@ public class StarWarsResponse {
         } else {
             speechText = "Are you sure " + name + " was in Star Wars?";
         }
-        return new StarWarsResponse(speechText, "Star Wars Lightsaber");
+        return new OwlChatResponse(speechText, "Star Wars Lightsaber");
     }
 
 
-    public static StarWarsResponse getQuotesResponse(String name) {
-        StarWarsCharacter character = DBUtil.getCharacter(name);
+    public static OwlChatResponse getQuotesResponse(String name) {
+        OwlChatCharacter character = DBUtil.getCharacter(name);
 
         String speechText;
 
@@ -99,12 +100,12 @@ public class StarWarsResponse {
         }
 
         // Create the Simple card content.
-        return new StarWarsResponse(speechText, "Star Wars Quotes");
+        return new OwlChatResponse(speechText, "Star Wars Quotes");
     }
 
 
-    public static StarWarsResponse getForceSensitiveResponse(String name) {
-        StarWarsCharacter character = DBUtil.getCharacter(name);
+    public static OwlChatResponse getForceSensitiveResponse(String name) {
+        OwlChatCharacter character = DBUtil.getCharacter(name);
 
         String speechText;
 
@@ -118,11 +119,11 @@ public class StarWarsResponse {
         }
 
         // Create the Simple card content.
-        return new StarWarsResponse(speechText, "Star Wars Force Sensitive");
+        return new OwlChatResponse(speechText, "Star Wars Force Sensitive");
     }
 
-    public static StarWarsResponse getForceSideResponse(String name) {
-        StarWarsCharacter character = DBUtil.getCharacter(name);
+    public static OwlChatResponse getForceSideResponse(String name) {
+        OwlChatCharacter character = DBUtil.getCharacter(name);
 
         String speechText;
 
@@ -141,26 +142,27 @@ public class StarWarsResponse {
         }
 
         // Create the Simple card content.
-        return new StarWarsResponse(speechText, "Star Wars Force Side");
+        return new OwlChatResponse(speechText, "Star Wars Force Side");
     }
 
-    public static StarWarsResponse getDialogueQuestion() {
-        StarWarsCharacter character = DBUtil.getRandomCharacter();
+    public static OwlChatResponse getDialogueQuestion() {
+        OwlChatCharacter character = DBUtil.getRandomCharacter();
         List<String> list = character.getQuotes();
 
         Random random = new Random();
         String speechText = "Who said \"" + list.get(random.nextInt(list.size())) + "\"";
 
-        StarWarsResponse response = new StarWarsResponse(speechText, "Star Wars Quote Question");
+        OwlChatResponse response = new OwlChatResponse(speechText, "Star Wars Quote Question");
         response.sessionAttributes.put("character", character.getName());
         response.sessionAttributes.put("question", speechText);
 
         return response;
     }
 
-    public static StarWarsResponse getDialogueResponse() {
+    public static OwlChatResponse getDialogueResponse() {
         String speechText = "Yep, you're right!";
 
-        return new StarWarsResponse(speechText, "Star Wars Quote Response");
+        return new OwlChatResponse(speechText, "Star Wars Quote Response");
     }
 }
+ */

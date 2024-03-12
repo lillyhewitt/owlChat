@@ -1,5 +1,6 @@
-package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.lex;
+package org.sample.aws.chatbot.temple.lex;
 
+/*
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import org.sample.aws.chatbot.starwars.common.StarWarsIntent;
@@ -11,11 +12,15 @@ import org.sample.aws.lex.response.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+ */
+
 import java.util.Map;
 
-public class owlChatLex implements RequestHandler<LexRequest, LexResponse> {
+public class owlChatLex { }
+    //implements RequestHandler<LexRequest, LexResponse> {
 
-    private static final Logger log = LoggerFactory.getLogger(StarWarsLexBot.class);
+    /*
+    private static final System.Logger log = LoggerFactory.getLogger(OwlChatLex.class);
 
     @Override
     public LexResponse handleRequest(LexRequest request, Context context) {
@@ -145,4 +150,6 @@ public class owlChatLex implements RequestHandler<LexRequest, LexResponse> {
     }
 }
 
+
+     */
 

@@ -1,5 +1,6 @@
-package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common;
+package org.sample.aws.chatbot.temple.common;
 
+/*
 import src.main.java.org.slf4j.Logger;
 import src.main.java.org.slf4j.LoggerFactory;
 
@@ -16,7 +17,10 @@ import com.amazon.speech.ui.PlainTextOutputSpeech;
 import com.amazon.speech.ui.Reprompt;
 import com.amazon.speech.ui.SimpleCard;
 
-public class OwlChatSpeechlet implements Speechlet {
+ */
+
+public class OwlChatSpeechlet {}
+/*implements Speechlet {
     private static final Logger log = LoggerFactory.getLogger(OwlChatSpeechlet.class);
 
     @Override
@@ -67,12 +71,13 @@ public class OwlChatSpeechlet implements Speechlet {
         } else {
             throw new SpeechletException("Invalid Intent: " + intentName);
         }
-        */
-    }
+   }
+ */
 
     // Creates and returns a {@code SpeechletResponse} with a welcome message.
      //@return SpeechletResponse spoken and visual response for the given intent
 
+/*
     private SpeechletResponse getWelcomeResponse() {
         OwlChatResponse response = OwlChatResponse.getWelcomeResponse();
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
@@ -143,4 +148,5 @@ public class OwlChatSpeechlet implements Speechlet {
         return SpeechletResponse.newAskResponse(speech, reprompt, getCard(speechText, title));
     }
 }
+*/
 

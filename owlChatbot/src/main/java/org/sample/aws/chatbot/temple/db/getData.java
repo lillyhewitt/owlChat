@@ -1,4 +1,6 @@
-package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.db;
+package org.sample.aws.chatbot.temple.db;
+
+/*
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
@@ -115,5 +117,7 @@ public class OwlChatCharacter {
         this.quotes = quotes;
     }
 }
+
+ */
 
 

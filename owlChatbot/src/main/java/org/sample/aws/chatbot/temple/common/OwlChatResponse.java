@@ -1,7 +1,7 @@
-package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common;
+package org.sample.aws.chatbot.temple.common;
 
-import src.main.java.org.sample.aws.chatbot.temple.db.OwlChatCharacter;
-import src.main.java.org.sample.aws.chatbot.temple.db.DBUtil;
+//import org.sample.aws.chatbot.temple.db.OwlChatCharacter;
+//import org.sample.aws.chatbot.temple.db.DBUtil;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,10 +13,11 @@ public class OwlChatResponse {
     String title;
     Map<String, String> sessionAttributes;
 
-    public static main(String[] args) {
-        System.out.prinln("New Owl Chat. Welcome.");
+    public static void main(String[] args) {
+        System.out.println("New Owl Chat. Welcome.");
     }
-
+}
+    /*
     private static final String help = "Ask questions about Temple University";
 
     public OwlChatResponse(String speechText, String title) {
@@ -46,11 +47,9 @@ public class OwlChatResponse {
     }
 
     public static OwlChatResponse getPlanetResponse(String name) {
-        OwlChatCharacter character = DBUtil.getCharacter(name);
+        // OwlChatCharacter character = DBUtil.getCharacter(name);
 
-        String speechText;
-
-        /*
+        String speechText = "check";;
 
         if (character != null && character.getName() != null) {
             String planet = character.getPlanet();
@@ -64,17 +63,15 @@ public class OwlChatResponse {
             speechText = "Are you sure " + name + " was in Star Wars?";
         }
 
-        */
-
         return new OwlChatResponse(speechText, "Star Wars Planet");
     }
 
     public static OwlChatResponse getLightsaberResponse(String name) {
-        OwlChatCharacter character = DBUtil.getCharacter(name);
+        //OwlChatCharacter character = DBUtil.getCharacter(name);
 
-        String speechText;
+        String speechText = "check";;
 
-        /*
+
         if (character != null && character.getName() != null) {
             if (null == character.getLightsaberColor()) {
                 speechText = character.getName() + " does not have a lightsaber";
@@ -86,17 +83,16 @@ public class OwlChatResponse {
         } else {
             speechText = "Are you sure " + name + " was in Star Wars?";
         }
-        */
+
         return new OwlChatResponse(speechText, "Star Wars Lightsaber");
     }
 
 
     public static OwlChatResponse getQuotesResponse(String name) {
-        OwlChatCharacter character = DBUtil.getCharacter(name);
+        // OwlChatCharacter character = DBUtil.getCharacter(name);
 
-        String speechText;
+        String speechText = "check";
 
-        /*
         if (character != null && character.getName() != null) {
             List<String> list = character.getQuotes();
             Random random = new Random();
@@ -108,7 +104,7 @@ public class OwlChatResponse {
         } else {
             speechText = "Are you sure " + name + " was in Star Wars?";
         }
-        */
+
 
         // Create the Simple card content.
         return new OwlChatResponse(speechText, "Star Wars Quotes");
@@ -116,11 +112,10 @@ public class OwlChatResponse {
 
 
     public static OwlChatResponse getForceSensitiveResponse(String name) {
-        OwlChatCharacter character = DBUtil.getCharacter(name);
+       // OwlChatCharacter character = DBUtil.getCharacter(name);
 
-        String speechText;
+        String speechText = "check";
 
-        /*
         if (character != null && character.getName() != null) {
             speechText = (character.isForceSensitive() ? "Yes, " : "No, ") +
                     character.getName() +
@@ -129,18 +124,16 @@ public class OwlChatResponse {
         } else {
             speechText = "Are you sure " + name + " was in Star Wars?";
         }
-        */
 
         // Create the Simple card content.
         return new OwlChatResponse(speechText, "Star Wars Force Sensitive");
     }
 
     public static OwlChatResponse getForceSideResponse(String name) {
-        OwlChatCharacter character = DBUtil.getCharacter(name);
+        //OwlChatCharacter character = DBUtil.getCharacter(name);
 
-        String speechText;
+        String speechText = "check";
 
-        /*
         if (character != null && character.getName() != null) {
             if (character.isForceSensitive()) {
                 speechText = character.getName() +
@@ -154,24 +147,24 @@ public class OwlChatResponse {
         } else {
             speechText = "Are you sure " + name + " was in Star Wars?";
         }
-        */
 
         // Create the Simple card content.
         return new OwlChatResponse(speechText, "Star Wars Force Side");
     }
 
     public static OwlChatResponse getDialogueQuestion() {
-        OwlChatCharacter character = DBUtil.getRandomCharacter();
-        List<String> list = character.getQuotes();
+       // OwlChatCharacter character = DBUtil.getRandomCharacter();
+        //List<String> list = character.getQuotes();
 
         Random random = new Random();
-        String speechText = "Who said \"" + list.get(random.nextInt(list.size())) + "\"";
+        //String speechText = "Who said \"" + list.get(random.nextInt(list.size())) + "\"";
 
-        OwlChatResponse response = new OwlChatResponse(speechText, "Star Wars Quote Question");
-        response.sessionAttributes.put("character", character.getName());
-        response.sessionAttributes.put("question", speechText);
+        //OwlChatResponse response = new OwlChatResponse(speechText, "Star Wars Quote Question");
+        //response.sessionAttributes.put("character", character.getName());
+        //response.sessionAttributes.put("question", speechText);
 
-        return response;
+        //return response;
+        return null;
     }
 
     public static OwlChatResponse getDialogueResponse() {
@@ -180,4 +173,6 @@ public class OwlChatResponse {
         return new OwlChatResponse(speechText, "Owl Response");
     }
 }
- */
+
+     */
+

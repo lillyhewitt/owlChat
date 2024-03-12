@@ -1,6 +1,5 @@
 package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.lex;
 
-/*
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import org.sample.aws.chatbot.starwars.common.StarWarsIntent;
@@ -14,7 +13,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-public class StarWarsLexBot implements RequestHandler<LexRequest, LexResponse> {
+public class owlChatLex implements RequestHandler<LexRequest, LexResponse> {
 
     private static final Logger log = LoggerFactory.getLogger(StarWarsLexBot.class);
 
@@ -61,32 +60,32 @@ public class StarWarsLexBot implements RequestHandler<LexRequest, LexResponse> {
     }
 
     private LexResponse getHelpResponse() {
-        StarWarsResponse response = StarWarsResponse.getHelpResponse();
+        OwlChatResponse response = OwlChatResponse.getHelpResponse();
         return getLexResponse(response.getSpeechText(), response.getTitle());
     }
 
     private LexResponse getQuotesResponse(String name) {
-        StarWarsResponse response = StarWarsResponse.getQuotesResponse(name);
+        OwlChatResponse response = OwlChatResponse.getQuotesResponse(name);
         return getLexResponse(response.getSpeechText(), response.getTitle());
     }
 
     private LexResponse getPlanetResponse(String name) {
-        StarWarsResponse response = StarWarsResponse.getPlanetResponse(name);
+        OwlChatResponse response = OwlChatResponse.getPlanetResponse(name);
         return getLexResponse(response.getSpeechText(), response.getTitle());
     }
 
     private LexResponse getLightsaberResponse(String name) {
-        StarWarsResponse response = StarWarsResponse.getLightsaberResponse(name);
+        OwlChatResponse response = OwlChatResponse.getLightsaberResponse(name);
         return getLexResponse(response.getSpeechText(), response.getTitle());
     }
 
     private LexResponse getForceSensitiveResponse(String name) {
-        StarWarsResponse response = StarWarsResponse.getForceSensitiveResponse(name);
+        OwlChatResponse response = OwlChatResponse.getForceSensitiveResponse(name);
         return getLexResponse(response.getSpeechText(), response.getTitle());
     }
 
     private LexResponse getForceSideResponse(String name) {
-        StarWarsResponse response = StarWarsResponse.getForceSideResponse(name);
+        OwlChatResponse response = OwlChatResponse.getForceSideResponse(name);
         return getLexResponse(response.getSpeechText(), response.getTitle());
     }
 
@@ -131,7 +130,7 @@ public class StarWarsLexBot implements RequestHandler<LexRequest, LexResponse> {
     }
 
     private LexResponse getDialogueResponse() {
-        StarWarsResponse response = StarWarsResponse.getDialogueResponse();
+        OwlChatResponse response = OwlChatResponse.getDialogueResponse();
         LexResponse lexResponse = getLexResponse(response.getSpeechText(), response.getTitle());
         lexResponse.addAttribute("answered", "yes");
         lexResponse.clearAttributes();
@@ -146,4 +145,4 @@ public class StarWarsLexBot implements RequestHandler<LexRequest, LexResponse> {
     }
 }
 
- */
+

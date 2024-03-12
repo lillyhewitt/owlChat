@@ -1,6 +1,5 @@
 package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.db;
 
-/*
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
@@ -117,5 +116,4 @@ public class OwlChatCharacter {
     }
 }
 
- */
 

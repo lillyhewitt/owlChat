@@ -1,6 +1,5 @@
 package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.db;
 
-/*
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
@@ -75,4 +74,3 @@ public class DBUtil {
         return null;
     }
 }
-*/

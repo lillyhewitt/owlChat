@@ -1,6 +1,5 @@
 package owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common;
 
-/*
 import src.main.java.org.slf4j.Logger;
 import src.main.java.org.slf4j.LoggerFactory;
 
@@ -54,6 +53,7 @@ public class OwlChatSpeechlet implements Speechlet {
         String intentName = (intent != null) ? intent.getName() : null;
         String character = intent.getSlot("character").getValue();
 
+        /*
         if (OwlChatIntent.QUOTES_INTENT.equals(intentName)) {
             return getQuotesResponse(character);
         } else if (OwlChatIntent.PLANET_INTENT.equals(intentName)) {
@@ -67,13 +67,14 @@ public class OwlChatSpeechlet implements Speechlet {
         } else {
             throw new SpeechletException("Invalid Intent: " + intentName);
         }
+        */
     }
 
     // Creates and returns a {@code SpeechletResponse} with a welcome message.
      //@return SpeechletResponse spoken and visual response for the given intent
 
     private SpeechletResponse getWelcomeResponse() {
-        owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse response = owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse.getWelcomeResponse();
+        OwlChatResponse response = OwlChatResponse.getWelcomeResponse();
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
     }
 
@@ -82,32 +83,32 @@ public class OwlChatSpeechlet implements Speechlet {
      //@return SpeechletResponse spoken and visual response for the given intent
 
     private SpeechletResponse getHelpResponse() {
-        owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse response = owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse.getWelcomeResponse();
+        OwlChatResponse response = OwlChatResponse.getWelcomeResponse();
         return getSpeechletResponse(response.getSpeechText(), response.getTitle());
     }
 
     private SpeechletResponse getQuotesResponse(String character) {
-        owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse response = owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse.getQuotesResponse(character);
+        OwlChatResponse response = OwlChatResponse.getQuotesResponse(character);
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
     }
 
     private SpeechletResponse getPlanetResponse(String character) {
-        owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse response = owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse.getPlanetResponse(character);
+        OwlChatResponse response = OwlChatResponse.getPlanetResponse(character);
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
     }
 
     private SpeechletResponse getLightsaberResponse(String character) {
-        owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse response = owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse.getLightsaberResponse(character);
+        OwlChatResponse response = OwlChatResponse.getLightsaberResponse(character);
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
     }
 
     private SpeechletResponse getForceSensitiveResponse(String name) {
-        owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse response = owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse.getForceSensitiveResponse(name);
+        OwlChatResponse response = OwlChatResponse.getForceSensitiveResponse(name);
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
     }
 
     private SpeechletResponse getForceSideResponse(String name) {
-        owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse response = owlChatbot.src.main.java.org.sample.aws.chatbot.temple.common.OwlChatResponse.getForceSideResponse(name);
+        OwlChatResponse response = OwlChatResponse.getForceSideResponse(name);
         return getSpeechletResponseWithReprompt(response.getSpeechText(), response.getTitle());
     }
 
@@ -143,4 +144,3 @@ public class OwlChatSpeechlet implements Speechlet {
     }
 }
 
- */
